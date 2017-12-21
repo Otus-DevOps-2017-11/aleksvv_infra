@@ -24,3 +24,25 @@ Host someinternalhost
   ProxyCommand ssh bastion -W %h:%p
 ```
 - Команда для подключения: ssh someinternalhost
+
+### Homework 6 Infra_2
+
+#### Скрипты создания виртуальной машины:
+
+* install_ruby.sh - установка руби
+* install_mongodb.sh - установка MongoDB
+* deploy.sh - запуск приложения
+* startup_script.sh - запускаеться при создании инстанса
+
+#### Команда создания виртуальной машины:
+
+gcloud compute instances create reddit-app \
+    --boot-disk-size=10GB \
+    --image-family ubuntu-1604-lts \
+    --image-project=ubuntu-os-cloud \
+    --machine-type=g1-small \
+    --tags puma-server \
+    --restart-on-failure \
+    --zone=europe-west1-c \
+    --metadata-from-file startup-script=startup_script.sh
+
