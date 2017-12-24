@@ -1,0 +1,10 @@
+{
+	"proj_id": "buoyant-dynamo-188819",
+	"source_image_family": "ubuntu-1604-lts",
+	"machine_type":"f1-micro",
+    "image_description": "reddit VM",
+    "disk_size": "10",
+    "disk_type": "pd-standard",
+    "network": "default",
+    "tags": "puma-server" 
+}
