@@ -46,3 +46,10 @@ gcloud compute instances create reddit-app \
     --zone=europe-west1-c \
     --metadata-from-file startup-script=startup_script.sh
 
+### Homework 7 packer_base
+
+#### Команда создания образа виртуальной машины:
+
+packer build -var-file=variables.json.example ubuntu16.json 
+
+
